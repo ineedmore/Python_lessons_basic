@@ -5,6 +5,27 @@
 # если такой корень вообще можно извлечь
 # Пример: Дано: [2, -5, 8, 9, -25, 25, 4]   Результат: [3, 5, 2]
 
+import math
+
+numList = []
+newList = []
+thirdList = []
+maxLength = int(input('How many numbers you want to enter?',))
+while len(numList) < maxLength:
+    a = int(input('Please enter integer number:'))
+    numList.append(a)
+
+for a in numList:
+    b = math.sqrt(a)
+    if (b).is_integer():
+        newList.append(b)
+    else:
+        thirdList.append(b)
+
+print('The inputed numbers were: ', numList)
+print('The answer for homework is here:', newList)
+print('Bad sqrt are:', thirdList)
+
 
 # Задача-2: Дана дата в формате dd.mm.yyyy, например: 02.11.2013.
 # Ваша задача вывести дату в текстовом виде, например: второе ноября 2013 года.
